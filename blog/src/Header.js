@@ -9,8 +9,8 @@ class Header extends Component{
           <div className="row">
             <div className="col-lg-8 col-md-10 mx-auto">
               <div className="site-heading">
-                <h1>Clean Blog</h1>
-                <span className="subheading">A Blog Theme by Start Bootstrap</span>
+                <h1>Cristina's Blog</h1>
+                <span className="subheading">Write/Speak and personal reflexions</span>
               </div>
             </div>
           </div>

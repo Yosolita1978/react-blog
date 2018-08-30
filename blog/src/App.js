@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar';
 import Header from './Header';
 import Footer from './Footer';
-import PostContainer from './PostContainer'
+import HomeComponent from "./HomeComponent";
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -12,10 +12,7 @@ class App extends Component {
       <div>
       <Navbar />
       <Header />
-      <PostContainer />
-      <div className="clearfix">
-      <a className="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-      </div>      
+      <Route exact path="/" component={HomeComponent} />
       <Footer />
       </div>
     );
