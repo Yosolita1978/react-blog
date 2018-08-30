@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class Postpreview extends Component{
   render(){
+    const { post } = this.props;
     return(
       <div className="post-preview">
-        <a href="post.html">
-          <h2 className="post-title">{this.props.title}</h2>
-          <h3 className="post-subtitle">{this.props.subtitle}</h3>
-        </a>
-        <p className="post-meta">Posted by
-          <a href="#">{this.props.author}</a>
-          on {this.props.date}</p>
+        <Link to={'/post/' + post.id + '/'}>
+          <h2 className="post-title">{post.title}</h2>
+        </Link>
+          <h3 className="post-subtitle">{post.subtitle}</h3>
+        <p className="post-meta">Posted by {post.author} on {post.date}</p>
       </div>
     );
   }

@@ -422,3 +422,7 @@ footer .copyright {
 .masthead.headImg{
   background: url(../img/blog-home.png);
 }
+
+h3.post-subtitle{
+  color: #2f5c98;
+}
