@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 const Postpreview = props => (
 
     <div>
-    { props.posts.map(({fields}, i) =>
+    { props.posts.map(({sys, fields}, i) =>
     <div key={fields.id} className="post-preview">
-        <Link to={'/post/' + fields.id + '/'}>
+        <Link to={'/post/' + sys.id + '/'}>
           <h2 className="post-title">{fields.title}</h2>
         </Link>
           <h3 className="post-subtitle">{fields.subtitle}</h3>
@@ -15,7 +15,5 @@ const Postpreview = props => (
     )}
     </div>
   );
-
-
 
 export default Postpreview;
