@@ -25,23 +25,20 @@ client = contentful.createClient({
         posts: response.items
 
       });
-
-
+      // console.log(this.state.posts);
     }
 
   render(){
 
     return (
       <div className="container">
-        <div className="row">
+      <div className="row">
           <div className="col-lg-8 col-md-10 mx-auto">
-          { this.state.posts.map(({fields}, i) =>
-          <Postpreview key={i} post={fields} />
-          )}
+          <Postpreview posts={this.state.posts} />
           <hr/>
           </div>
-        </div>
-      </div>
+          </div>
+          </div>
     );
   }
 }
