@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import * as contentful from 'contentful'
+import * as contentful from 'contentful';
+import * as Markdown from 'react-markdown';
 
 
 class SinglePost extends Component{
@@ -43,7 +44,7 @@ client = contentful.createClient({
           <h2 className="post-title">{post.title}</h2>
           <h3 className="post-subtitle">{post.subtitle}</h3>
           <p className="post-meta">Posted by {post.author} on {post.date}</p>
-          <p className="post-content">{post.content}</p>
+          <Markdown source={post.content} />
           <hr/>
           </div>
         </div>
